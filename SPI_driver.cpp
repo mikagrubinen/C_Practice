@@ -63,13 +63,6 @@ public:
         LPC_PINCON->PINSEL0 &= ~(3 << 12);		//making P0.6 GPIO by resetting bits to 00
         LPC_GPIO0->FIODIR |= (1 << flash_cs);	//making P0.6 output direction (Chip Select)
 
-        /*
-         * next three lines are from the wiki page.
-         * I would do it like this:
-         * 		LPC_SSP1->CR0 |= 7;			// set B3:0 to 0111 - 8bit transfer
-         * 		LPC_SSP1->CR1 &= ~(1 << 2);	// set B2 to 0 to make it Master mode
-         * 		LPC_SSP1->CPSR = 8;         // SCK speed = CPU / 8
-         */
         LPC_SSP1->CR0 = 7;
         LPC_SSP1->CR1 = (1 << 1);
         LPC_SSP1->CPSR = 8;         // SCK speed = CPU / 8
