@@ -7,3 +7,4 @@
 
 # Unignore all dirs
 !*/
+*.DS_Store
