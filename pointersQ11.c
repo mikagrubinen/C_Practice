@@ -1,6 +1,6 @@
 /**
  * C Pointer Basics Test from www.geeksforgeeks.org
- * Question 11
+ * Question 13
  * Try to figure out the result, then uncomment printf() to check result
  */
 
